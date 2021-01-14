@@ -1,24 +1,54 @@
+@import "bootstrap";
+@import "home";
+@import "presentation";
+@import "invest";
+@import "contact";
+@import "reference";
+@import "variables";
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  padding-top: 74px;
 }
 
-a {
-  color: rgba(#000, 0.7);
+#body-wrap {
+  height:             100%;
+  min-height:         800px;
+  padding-bottom:     0px;
+}
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+footer {
+  margin-top:  50px;
+  box-shadow:  0px -1px 5px 0px rgba(0,0,0,0.75);
+  height:      180px;
+  padding-top: 1em;
+  color:       $brand-primary;
+  .footer-brand {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    img {
+      height: 100px;
+    }
+  }
+  .social {
+    img {
+      margin-bottom: 2px;
+    }
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+h1, h2, h3, h4 {
+  font-family: $header-font !important;
+}
+
+.padded {
+  padding-top:    2em;
+  padding-bottom: 2em;
+}
+
+.padding-top {
+  padding-top: 2em;
+}
+
+.padding-bottom {
+  padding-bottom: 2em;
 }
