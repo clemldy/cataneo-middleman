@@ -7,7 +7,7 @@
             <h2><b>Investissement locatif <br>clé en main et rentable</b></h3>
             <h3>Spécialiste de l’immobilier ancien, <br>à <b>Lyon</b>, Villeurbanne et leurs environs</h4>
             <h4><i>Débutant, confirmé, en France ou à l’étranger, déléguez l’intégralité de votre projet à nos experts</i></h5>
-            <a href="{% path_to investir %}#response" class="btn btn-primary">Lancer mon projet </a>
+            <a href="/investir#response" class="btn btn-primary">Lancer mon projet </a>
           </div>
           <div class="investir-button text-center">
           </div>
@@ -86,7 +86,7 @@
       <div class="col-md-10 col-md-offset-1">
         <h4>Notre équipe est capable d’accompagner <b>à distance</b> tout type de clients (débutants, confirmés, lyonnais, parisiens, expatriés…) pour sécuriser et mener leur projet de A à Z.</h4>
         <div class="padding-top">
-          <a href="{% path_to presentation %}" class="btn btn-outline-primary">Notre expertise</a>
+          <a href="/presentation" class="btn btn-outline-primary">Notre expertise</a>
         </div>
       </div>
     </div>
@@ -117,7 +117,7 @@
     <div class="col-md-10 col-md-offset-1">
       <h4>Le marché Lyonnais présente des opportunités variées répondant à de nombreux objectifs.</h4>
       <div class="padding-top">
-        <a href="{% path_to investir %}" class="btn btn-primary">Notre méthode d’accompagnement</a>
+        <a href="/investir" class="btn btn-primary">Notre méthode d’accompagnement</a>
       </div>
     </div>
   </div>
@@ -131,15 +131,13 @@
     </div>
   </div>
   <div class="row">
-    {% for reference in contents.references limit:8 %}
     <div class="col-md-3 padding-top link-ref">
-      <a href="{% path_to reference %}">
-        <%= image_tag("{{ reference.principal_image.url }}")%>
-      </a>
-      <h4>{{ reference.name}}</h4>
-      <p>{{ reference.surface}} - {{ reference.total_budget}}</p>
+      <% link_to '/references/collocation-01.html' do %>
+        <%= image_tag("references/couvertureletorri.png") %>
+      <% end %>
+      <h4>Colocation 3 personnes Lyon 8</h4>
+      <p>63m2 - 243 000 €</p>
     </div>
-    {% endfor %}
   </div>
   <div class="row text-center padding-top">
     <a href="{% path_to references %}" class="btn btn-primary">Voir toutes nos références</a>
